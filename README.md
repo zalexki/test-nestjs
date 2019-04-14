@@ -1,13 +1,16 @@
 TODO:
 
-Entities - (Crea/UpdatedAt trait)
+.Entities - (Crea/UpdatedAt trait)
 - Post
 - User
 
-Configuration
-Logger
-Security/Authentication
-File upload
+.Configuration
 
-Testing
+.Logger
+
+.Security/Authentication
+
+.File upload
+
+.Testing
 
