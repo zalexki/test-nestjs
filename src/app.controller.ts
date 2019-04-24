@@ -15,12 +15,24 @@ export class AppController {
     return this.appService.getHello();
   }
 
+  @Get('all')
+  getAll(): string {
+    let findAll = this.postService.findAll();
+    findAll.then(function(value) {
+      console.log(value);
+    });
+    
+    return this.appService.getHello();
+  }
+  
   @Get(':name')
   getWithParam(@Param() params): string {
-    let newPost = new Post();
-    newPost.name = params.name;
-    this.postService.create(newPost);
-    console.log(this.postService.save(newPost));
+    if (params.name != 'favicon.ico') {
+      let newPost = new Post();
+      newPost.name = params.name;
+
+      this.postService.save(newPost);
+    }
 
     return this.appService.getHello();
   }

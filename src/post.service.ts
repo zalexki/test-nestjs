@@ -11,13 +11,8 @@ export class PostService {
     @InjectRepository(Post)
     private readonly postRepository: Repository<Post>
   ) {}
-  
-  create(Post: Post) {
-    this.posts.push(Post);
-  }
 
   save(entity){
-    console.log('save');
     return this.postRepository.save(entity);
   }
 
